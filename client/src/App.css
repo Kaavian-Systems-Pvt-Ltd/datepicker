@@ -1,0 +1,22 @@
+.datepick{
+  margin-left: 42%;
+  margin-top: 5%;
+}
+#dpick{
+  width:150px;
+  font-size: 20px;
+  background-color: #C90520;
+  color:#fff;
+  cursor: pointer;
+  padding-left: 60px;
+}
+.react-datepicker {
+  font-family:  sans-serif;
+  font-size: 20px;
+  background-color: #C90520;
+  color: #fff;
+  border: 0px;
+  border-radius: 0;
+  display: inline-block;
+  position: relative;
+}
