@@ -1,25 +1,20 @@
-import React, { useState } from "react";  
-import DatePicker from "react-datepicker";  
-import "react-datepicker/dist/react-datepicker.css";
-import './App.css';  
-  
-// CSS Modules, react-datepicker-cssmodules.css  
-// import 'react-datepicker/dist/react-datepicker-cssmodules.css';  
-function App(){
+import React from "react"; 
+import MyDatePicker from "./mydatepicker";
+// import { DatePicker } from "@y0c/react-datepicker";
+// import calendar style
+// You can customize style by copying asset folder.
+// import "./red.scss";
+// Please include the locale you want to use.
+// and delivery props to calendar component
+// import "dayjs/locale/ko";
 
-  const [startDate, setStartDate] = useState(new Date());  
-  
+function App() {
+
   return (
-    <div className="datepick">  
-    <DatePicker id='dpick' dateFormat="dd/MM/yyyy" selected={startDate} 
-    placeholder="Choose the date" 
-    onChange={(date)=>setStartDate(date)}
-    minDate={new Date(2022,5,1)}
-    maxDate={new Date(2023,3,30)}>
-    </DatePicker>  
-  </div>
-  );  
-
-};  
+    <div className="App">
+      <MyDatePicker />
+    </div>
+  );
+}
 
 export default App;
