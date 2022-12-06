@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-date-picker';
 import './daypick.css'; 
 
-export default function MyDatePicker() {
+export default function MyDatePicker({minDate,maxDate,color,size}) {
   
     const [value, updateValue] = useState(new Date());
  
@@ -12,9 +12,10 @@ export default function MyDatePicker() {
  
   return (
     <div className='daypick'>
-      <DatePicker id='dpick' dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
+        <h1>Datepicker Component</h1> <br/>
+      <DatePicker dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
       format='dd/MM/yyyy'  onChange={onChange} value={value}
-      minDate={new Date(2022,0,1)} maxDate={new Date(2023,4,31)}>
+      minDate={new Date(2022,0,1)} maxDate={new Date(2023,11,31)}>
       </DatePicker>
     </div>
   );
