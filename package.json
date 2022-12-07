@@ -1,13 +1,13 @@
 {
-  "name": "datepickstorybook",
+  "name": "@kaavian-sys/datepicker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
+      "scripts": {
+      "test": "test-storybook",
+      "storybook": "start-storybook -p 6006",
+      "build-storybook": "build-storybook"
+    },
   "author": "Arockiaraj",
   "license": "ISC",
   "dependencies": {
@@ -19,12 +19,14 @@
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-coverage": "^0.0.7",
     "@storybook/addon-essentials": "^6.5.14",
     "@storybook/addon-interactions": "^6.5.14",
     "@storybook/addon-links": "^6.5.14",
     "@storybook/builder-webpack4": "^6.5.14",
     "@storybook/manager-webpack4": "^6.5.14",
     "@storybook/react": "^6.5.14",
+    "@storybook/test-runner": "^0.9.1",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.3.0",
     "eslint": "^8.29.0",
