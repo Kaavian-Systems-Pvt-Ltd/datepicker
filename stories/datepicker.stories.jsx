@@ -1,40 +1,27 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import MyDatePicker from "./datepicker";
-
-const stories =storiesOf('datepicker test',module);
-
-stories.add('datepicker',()=>{
-
-    return(<MyDatePicker />);
-});
-
-
+import React from 'react';
+import { MyDatePicker } from './datepicker';
 
 export default {
-  title: 'Datepicker',
-  component: Datepicker,
-  parameters: {
-    docs: {
-      description: {
-        component: 'Datepicker',
-      },
-    },
-  },
+  'title' : 'Example/calendar' ,
+  'component' : MyDatePicker ,
+  'argTypes' : {
+    'backgroundColor' : { 'control' : 'color' }
+  } 
 };
 
-const Template = (args) => <MyDatePicker {...args} />;
+const Template = (args)=> <MyDatePicker {...args} />;
 
-
-export const WithStoryDescription = Template.bind({});
-WithStoryDescription.args = {
-  docs: {
-    description: {
-      story: 'datepicker',
-      minDate:'01/01/2022',
-      maxDate:'31/12/2023'
-    },
-  },
+export const Normal = Template.bind ({});
+Normal.args = {
+   'label' : 'Datepicker' ,
+   'backgroundColor' : null ,
+  'mindate' : '01/01/2022' ,
+  'maxdate' : '31/12/2023'
+};
+export const  Rangechange = Template.bind ({});
+Rangechange.args = {
+'mindate' : '01/11/2022' ,
+'maxdate' : '31/12/2022'
 };
 
 
