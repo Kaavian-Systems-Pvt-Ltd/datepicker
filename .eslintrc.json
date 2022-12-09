@@ -6,8 +6,7 @@
         "node": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "kaaviansys"
+        "plugin:react/recommended"
     ],
     "overrides": [
     ],
