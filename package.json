@@ -2,7 +2,7 @@
   "name": "datepickstorybook",
   "version": "1.0.0",
   "description": "",
-  "main": "/src/index.js",
+  "main": "datepicker.jsx",
   "scripts": {
     "test-storybook": "test-storybook",
     "storybook": "start-storybook -p 6006",
