@@ -1,6 +1,6 @@
 .daypick{
-  margin-left: 42%;
-  margin-top: 5%;
+  margin-left: 5%;
+  margin-top: 2%;
 }
 .react-calendar{
   border-color: #A9D6DA;
@@ -11,7 +11,7 @@
 .react-date-picker__wrapper{
 border-color: #A9D6DA;
 width: 300px;
-margin-bottom: 2px;
+margin-bottom: 3px;
  border-radius: 5px;
 }
 .react-calendar__navigation{
@@ -73,4 +73,16 @@ color:black;
   text-decoration: none;
   font-size: 12px;
   font-weight: normal;
+}
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+  border-radius: 50%;
+}
+.react-calendar__tile:disabled {
+  background-color: white;
+}
+.react-calendar__tile--active:hover{
+  background: #0E8692;
 }
