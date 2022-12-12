@@ -46,21 +46,6 @@ var MyDatePicker = function MyDatePicker(_ref) {
   }));
 };
 
-// export const RandatePicker = ({ minDate , maxDate , ...props })=> {
-
-//   const [ value , updateValue ] = useState (new Date ());
-
-//   const onChange = (date)=> {
-//   updateValue (date);
-//   };
-//   return (
-//     <div className='daypick'>
-//           <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
-//           format='dd/MM/yyyy'  onChange={onChange} value={value} />
-//           </div>
-
-//       );
-// };
 exports.MyDatePicker = MyDatePicker;
 MyDatePicker.propTypes = {
   'backgroundColor': _propTypes["default"].string,
