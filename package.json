@@ -7,7 +7,7 @@
     "test-storybook": "test-storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build":"babel src/index.js --out-file datepick.jsx"
+    "build": "babel src/index.js --out-file datepick.jsx"
   },
   "author": "Arockiaraj",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "@babel/node": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
     "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.2",
     "eslint-config-kaaviansys": "github:Kaavian-Systems-Pvt-Ltd/eslint-config-kaaviansys",
     "html-webpack-plugin": "^5.5.0",
     "react": "^18.2.0",
