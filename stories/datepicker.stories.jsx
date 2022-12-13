@@ -41,8 +41,8 @@ stories.add('default' , ()=> {
   <MyDatePicker startdate="" enddate="" />;
   </div>
 })
-MyDatePicker.propTypes={
-  startdate:PropTypes.string.isRequired,
-  enddate:PropTypes.string.isRequired, 
-  // label:PropTypes.string.isRequired  
-}
+// MyDatePicker.propTypes={
+//   startdate:PropTypes.string.isRequired,
+//   enddate:PropTypes.string.isRequired, 
+//   // label:PropTypes.string.isRequired  
+// }
