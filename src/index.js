@@ -24,16 +24,16 @@ export default function MyDatePicker(props){
       );
 };
 
-MyDatePicker.propTypes = {
-  'backgroundColor' : PropTypes.string ,
-  'label' : PropTypes.string.isRequired ,
-  'minDate' : PropTypes.date.isRequired ,
-  'maxDate' : PropTypes.date.isRequired
-};
+// MyDatePicker.propTypes = {
+//   'backgroundColor' : PropTypes.string ,
+//   'label' : PropTypes.string.isRequired ,
+//   'minDate' : PropTypes.date.isRequired ,
+//   'maxDate' : PropTypes.date.isRequired
+// };
 
-MyDatePicker.defaultProps = {
-  'label' : string ,
-  'backgroundColor' : null ,
-  'minDate' : date ,
-  'maxDate' : date
-};
+// MyDatePicker.defaultProps = {
+//   'label' : string ,
+//   'backgroundColor' : null ,
+//   'minDate' : date ,
+//   'maxDate' : date
+// };

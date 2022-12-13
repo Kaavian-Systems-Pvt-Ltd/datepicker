@@ -39,15 +39,17 @@ function MyDatePicker(props) {
   }));
 }
 ;
+
 // MyDatePicker.propTypes = {
-//   'backgroundColor': _propTypes["default"].string,
-//   'label': _propTypes["default"].string,
-//   'minDate': _propTypes["default"].date,
-//   'maxDate': _propTypes["default"].date
+//   'backgroundColor' : PropTypes.string ,
+//   'label' : PropTypes.string.isRequired ,
+//   'minDate' : PropTypes.date.isRequired ,
+//   'maxDate' : PropTypes.date.isRequired
 // };
+
 // MyDatePicker.defaultProps = {
-//   'label': string,
-//   'backgroundColor': null,
-//   'minDate': date,
-//   'maxDate': date
+//   'label' : string ,
+//   'backgroundColor' : null ,
+//   'minDate' : date ,
+//   'maxDate' : date
 // };
