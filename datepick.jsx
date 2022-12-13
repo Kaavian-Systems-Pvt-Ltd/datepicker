@@ -4,10 +4,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.MyDatePicker = void 0;
+exports["default"] = MyDatePicker;
 var _react = _interopRequireWildcard(require("react"));
 var _reactDatePicker = _interopRequireDefault(require("react-date-picker"));
-require("./daypick.css");
+require("../daypick.css");
 var _propTypes = _interopRequireDefault(require("prop-types"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -18,7 +18,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var MyDatePicker = function MyDatePicker(props) {
+function MyDatePicker(props) {
   var _useState = (0, _react.useState)(new Date()),
     _useState2 = _slicedToArray(_useState, 2),
     value = _useState2[0],
@@ -38,8 +38,8 @@ var MyDatePicker = function MyDatePicker(props) {
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)
   }));
-};
-exports.MyDatePicker = MyDatePicker;
+}
+;
 MyDatePicker.propTypes = {
   'backgroundColor': _propTypes["default"].string,
   'label': _propTypes["default"].string.isRequired,

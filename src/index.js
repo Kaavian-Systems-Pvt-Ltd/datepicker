@@ -6,7 +6,7 @@ import '../daypick.css';
 import PropTypes from 'prop-types';
 
 
-export const MyDatePicker = (props)=> {
+export default function MyDatePicker(props){
 
   const [ value , updateValue ] = useState (new Date ());
  
