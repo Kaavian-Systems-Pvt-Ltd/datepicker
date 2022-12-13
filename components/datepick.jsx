@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React , { useState } from 'react';
 import DatePicker from 'react-date-picker';
-import '../daypick.css'; 
+import './daypick.css'; 
 import PropTypes from 'prop-types';
 
 
@@ -13,7 +13,7 @@ export const MyDatePicker = (props)=> {
   const onChange = (date)=> {
   updateValue (date);
   };
-  return (
+  return(
     <div className='daypick'>
           <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
           format='dd/MM/yyyy'  onChange={onChange} value={value} 

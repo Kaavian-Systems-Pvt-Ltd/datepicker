@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import { MyDatePicker } from './src/datepick';
+import { MyDatePicker } from '../datepick.jsx';
 import PropTypes from 'prop-types';
 
-const stories = storiesOf('Datepicker' ,MyDatePicker);
+const stories = storiesOf('Datepick' ,MyDatePicker);
 
 stories.add('minrange' , ()=> {
 
@@ -44,5 +44,5 @@ stories.add('default' , ()=> {
 MyDatePicker.propTypes={
   startdate:PropTypes.string.isRequired,
   enddate:PropTypes.string.isRequired, 
-  label:PropTypes.string.isRequired  
+  // label:PropTypes.string.isRequired  
 }
