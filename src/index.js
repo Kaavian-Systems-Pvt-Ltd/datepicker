@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React , { useState } from 'react';
 import DatePicker from 'react-date-picker';
-import './daypick.css'; 
+// import './daypick.css'; 
 import PropTypes from 'prop-types';
 
 
