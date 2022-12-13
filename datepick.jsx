@@ -39,15 +39,15 @@ function MyDatePicker(props) {
   }));
 }
 ;
-MyDatePicker.propTypes = {
-  'backgroundColor': _propTypes["default"].string,
-  'label': _propTypes["default"].string,
-  'minDate': _propTypes["default"].date,
-  'maxDate': _propTypes["default"].date
-};
-MyDatePicker.defaultProps = {
-  'label': string,
-  'backgroundColor': null,
-  'minDate': date,
-  'maxDate': date
-};
+// MyDatePicker.propTypes = {
+//   'backgroundColor': _propTypes["default"].string,
+//   'label': _propTypes["default"].string,
+//   'minDate': _propTypes["default"].date,
+//   'maxDate': _propTypes["default"].date
+// };
+// MyDatePicker.defaultProps = {
+//   'label': string,
+//   'backgroundColor': null,
+//   'minDate': date,
+//   'maxDate': date
+// };
