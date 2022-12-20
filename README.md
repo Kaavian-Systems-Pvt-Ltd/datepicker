@@ -13,7 +13,8 @@ Command: npm install datecal
 + the date values are may be possible to change as per user's choice to disable dates.
 
 ## The codes in your file: 
-```import MyDatePicker from 'datecal';
+```
+import MyDatePicker from 'datecal';
 function App(){
 return
 <MyDatePicker  startdate=”” enddate=”” />
