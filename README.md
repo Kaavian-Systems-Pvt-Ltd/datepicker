@@ -3,7 +3,7 @@ This package datepicker is used to disable your input dates to the component.
 
 ## Installation:
 In package.json file just paste this Line.
-"datecal": "github:Kaavian-Systems-Pvt-Ltd/Datepicker"
+"datecal": "https://github.com/Kaavian-Systems-Pvt-Ltd/Datepicker.git"
 
 Command: npm install datecal 
 
