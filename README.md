@@ -8,16 +8,16 @@ In package.json file just paste this Line.
 Command: npm install datecal 
 
 ## Rules:
-- The starting or ending date format is must date="year/month/date" ex:"yyyy/mm/dd" 
+- The starting or ending date format is must startdate="year/month/date" or enddate:"yyyy/mm/dd" 
 * The parameters are not change,must in same text ex:startdate, enddate
-+ the date values are may be possible to change as per user's choice to disable dates.
++ the date values are may be possible to change as per user's choice to disable dates. 
 
 ## The codes in your file: 
 ```
 import MyDatePicker from 'datecal';
 function App(){
 return
-<MyDatePicker  startdate=”” enddate=”” />
+<MyDatePicker  startdate=” ” enddate=” ” />
 
 }
 ```
