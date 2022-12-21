@@ -7,7 +7,8 @@ This package datepicker is used to disable your input dates to the component.
 In package.json file just paste this Line.
 "datecal": "https://github.com/Kaavian-Systems-Pvt-Ltd/Datepicker.git"
 
-Command: npm install datecal 
+#### To install:
+```npm install datecal --save-dev```
 
 ## Rules:
 - The starting or ending date format is must startdate="year/month/date" or enddate:"yyyy/mm/dd" 
