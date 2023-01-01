@@ -7,16 +7,16 @@ import PropTypes from 'prop-types';
 
 export default function MyDatePicker(props){
 
-  const [ value , setValue] = useState (new Date ());
+  const [ date , setDate] = useState (new Date ());
   const onChange = (date)=> {
-    setValue (date);
+    setDate (date);
     };
  
   
   return(
     <div className='daypick'>
           <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
-          format='dd/MM/yyyy'   onChange={onChange} 
+          format='dd/MM/yyyy'   onChange={onChange} value={date}
           minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}>
           </DatePicker>
           </div>
