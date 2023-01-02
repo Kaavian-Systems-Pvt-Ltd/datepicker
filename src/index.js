@@ -5,11 +5,11 @@ import './daypick.css';
 
 export default function MyDatePicker(props){
 
-  const [ value , setValue ] = useState (new Date ());
+  const [ startdate , setStartdate ] = useState (new Date ());
 
   const onChangeDate = (date) => {
-    const newDate = setValue((new Date(date.target.value)));
-    setValue(newDate);
+    const newDate = setStartdate((new Date(date.target.value)));
+    setStartdate(newDate);
     console.log(newDate);
   };
 
@@ -18,8 +18,8 @@ export default function MyDatePicker(props){
   return(
     <div className='daypick'>
 
-          <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
-          format='dd/MM/yyyy' onChange={(e) =>onChangeDate(e)}  value={value}
+          <DatePicker  dayPlaceholder='dd' mon1thPlaceholder='mm' yearPlaceholder='yyyy' 
+          format='dd/MM/yyyy' onChange={(e) =>onChangeDate(e)}  value={startdate}
           minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}> 
           </DatePicker>
           </div>
@@ -28,7 +28,7 @@ export default function MyDatePicker(props){
 };
 
 // MyDatePicker.propTypes = {
-//   'minDate' : PropTypes.date.isRequired ,
+//   'minDate' : PropTypes.date.isRequired,
 //   'maxDate' : PropTypes.date.isRequired
 // };
 
