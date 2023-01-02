@@ -1,6 +1,7 @@
 .daypick{
   margin-left: 5%;
   margin-top: 2%;
+  position:absolute;
 }
 .react-calendar{
   border-color: #A9D6DA;
