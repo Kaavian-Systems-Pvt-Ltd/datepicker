@@ -6,7 +6,7 @@ import './daypick.css';
 export default function MyDatePicker(props){
 
   const [ value , updateValue ] = useState (new Date ());
- 
+  const[pickdate,setPickdate]=useState('');
   const onChange = (date)=> {
   updateValue (date);
   };
@@ -15,6 +15,7 @@ export default function MyDatePicker(props){
   
   return(
     <div className='daypick'>
+          <input type='text' onChange={e=>setPickdate(e.target.value)}/>
           <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
           format='dd/MM/yyyy' onChange={e =>onChange(e.target.value)}  value={value}
           minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}> 
@@ -25,8 +26,6 @@ export default function MyDatePicker(props){
 };
 
 // MyDatePicker.propTypes = {
-//   'backgroundColor' : PropTypes.string ,
-//   'label' : PropTypes.string.isRequired ,
 //   'minDate' : PropTypes.date.isRequired ,
 //   'maxDate' : PropTypes.date.isRequired
 // };
