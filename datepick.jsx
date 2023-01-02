@@ -20,24 +20,24 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function MyDatePicker(props) {
   var _useState = (0, _react.useState)(new Date()),
     _useState2 = _slicedToArray(_useState, 2),
-    value = _useState2[0],
-    setValue = _useState2[1];
+    startdate = _useState2[0],
+    setStartdate = _useState2[1];
   var onChangeDate = function onChangeDate(date) {
-    var newDate = setValue(new Date(date.target.value));
-    setValue(newDate);
+    var newDate = setStartdate(new Date(date.target.value));
+    setStartdate(newDate);
     console.log(newDate);
   };
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "daypick"
   }, /*#__PURE__*/_react["default"].createElement(_reactDatePicker["default"], {
     dayPlaceholder: "dd",
-    monthPlaceholder: "mm",
+    mon1thPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
     onChange: function onChange(e) {
       return onChangeDate(e);
     },
-    value: value,
+    value: startdate,
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)
   }));
@@ -45,7 +45,7 @@ function MyDatePicker(props) {
 ;
 
 // MyDatePicker.propTypes = {
-//   'minDate' : PropTypes.date.isRequired ,
+//   'minDate' : PropTypes.date.isRequired,
 //   'maxDate' : PropTypes.date.isRequired
 // };
 
