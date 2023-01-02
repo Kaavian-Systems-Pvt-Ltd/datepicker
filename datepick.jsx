@@ -22,7 +22,7 @@ function MyDatePicker(props) {
     _useState2 = _slicedToArray(_useState, 2),
     value = _useState2[0],
     updateValue = _useState2[1];
-  var onChange = function onChange(date) {
+  var _onChange = function onChange(date) {
     updateValue(date);
   };
   return /*#__PURE__*/_react["default"].createElement("div", {
@@ -32,7 +32,9 @@ function MyDatePicker(props) {
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
-    onChange: onChange,
+    onChange: function onChange(e) {
+      return _onChange(e.target.value);
+    },
     value: value,
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)
