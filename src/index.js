@@ -15,7 +15,7 @@ export default function MyDatePicker(props){
   
   return(
     <div className='daypick'>
-          <input type='text' onChange={e=>setPickdate(e.target.value)}/>
+          <input type='text'  className='getdatevalue' onChange={e=>setPickdate(e.target.value)}/>
           <br/>
           <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
           format='dd/MM/yyyy' onChange={e =>onChange(e.target.value)}  value={value}
