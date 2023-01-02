@@ -13,7 +13,11 @@ function MyDatePicker(props){
     <div className='daypick'>
 
           <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
-          format='dd/MM/yyyy'  onChange={setStartdate}
+           format='dd/MM/yyyy' 
+          // onChange={setStartdate}
+            onChange={(date) => {
+            console.log(date);
+          }}
           value={startdate}
           minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}> 
           </DatePicker>
@@ -24,7 +28,6 @@ function MyDatePicker(props){
 };
 
 export default MyDatePicker;
-export let date;
 
 // MyDatePicker.propTypes = {
 //   'minDate' : PropTypes.date.isRequired,
