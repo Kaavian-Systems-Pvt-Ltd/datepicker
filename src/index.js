@@ -27,14 +27,14 @@ function MyDatePicker(props){
 
 export default MyDatePicker;
 
-// MyDatePicker.propTypes = {
-//   'minDate' : PropTypes.date.isRequired,
-//   'maxDate' : PropTypes.date.isRequired
-// };
+MyDatePicker.propTypes = {
+  'startdate' : PropTypes.date.isRequired,
+  'enddate' : PropTypes.date.isRequired,
+  'onChange':PropTypes.func.isRequired
+};
 
-// MyDatePicker.defaultProps = {
-//   'label' : string ,
-//   'backgroundColor' : null ,
-//   'minDate' : date ,
-//   'maxDate' : date
-// };
+MyDatePicker.defaultProps = {
+  'selectdate' : string,
+  'startdate' : date,
+  'enddate':date
+};

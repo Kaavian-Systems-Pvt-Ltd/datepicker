@@ -43,14 +43,15 @@ function MyDatePicker(props) {
   }), /*#__PURE__*/_react["default"].createElement("div", null, startdate));
 }
 ;
-var _default = MyDatePicker; // MyDatePicker.propTypes = {
-//   'minDate' : PropTypes.date.isRequired,
-//   'maxDate' : PropTypes.date.isRequired
-// };
-// MyDatePicker.defaultProps = {
-//   'label' : string ,
-//   'backgroundColor' : null ,
-//   'minDate' : date ,
-//   'maxDate' : date
-// };
+var _default = MyDatePicker;
 exports["default"] = _default;
+MyDatePicker.propTypes = {
+  'startdate': PropTypes.date.isRequired,
+  'enddate': PropTypes.date.isRequired,
+  'onChange': PropTypes.func.isRequired
+};
+MyDatePicker.defaultProps = {
+  'selectdate': string,
+  'startdate': date,
+  'enddate': date
+};
