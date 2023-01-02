@@ -36,7 +36,7 @@ function MyDatePicker(props) {
     onChange: function onChange(e) {
       return setPickdate(e.target.value);
     }
-  }), /*#__PURE__*/_react["default"].createElement(_reactDatePicker["default"], {
+  }), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement(_reactDatePicker["default"], {
     dayPlaceholder: "dd",
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
