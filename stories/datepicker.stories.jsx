@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import { MyDatePicker } from '../datepick';
+import { MyDatePicker } from '../src/index';
 import PropTypes from 'prop-types';
 
-const stories = storiesOf('Datepicker' ,MyDatePicker);
+const stories = storiesOf('Datepicker' ,DatePicker);
 
 stories.add('minrange' , ()=> {
 
