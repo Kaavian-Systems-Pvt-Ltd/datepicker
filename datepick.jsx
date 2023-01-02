@@ -33,6 +33,7 @@ function MyDatePicker(props) {
     className: "daypick"
   }, /*#__PURE__*/_react["default"].createElement("input", {
     type: "text",
+    className: "getdatevalue",
     onChange: function onChange(e) {
       return setPickdate(e.target.value);
     }

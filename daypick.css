@@ -89,3 +89,8 @@ color:black;
 .react-calendar__tile--now {
   background-color:#0E8692;
 }
+.getdatevalue{
+  width: 300px;
+  height:60px;
+  border-color: #0E8692;
+}
