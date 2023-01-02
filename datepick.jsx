@@ -4,7 +4,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = MyDatePicker;
+exports["default"] = exports.date = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _reactDatePicker = _interopRequireDefault(require("react-date-picker"));
 require("./daypick.css");
@@ -25,7 +25,7 @@ function MyDatePicker(props) {
   var onChangeDate = function onChangeDate(date) {
     var newDate = setStartdate(new Date(date.target.value));
     setStartdate(newDate);
-    console.log(newDate);
+    console.log(startdate);
   };
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "daypick"
@@ -34,13 +34,18 @@ function MyDatePicker(props) {
     mon1thPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
-    onChange: setStartdate,
+    onChange: function onChange(e) {
+      return onChangeDate(e);
+    },
     value: startdate,
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)
   }));
 }
 ;
+var _default = MyDatePicker;
+exports["default"] = _default;
+var date;
 
 // MyDatePicker.propTypes = {
 //   'minDate' : PropTypes.date.isRequired,
@@ -53,3 +58,4 @@ function MyDatePicker(props) {
 //   'minDate' : date ,
 //   'maxDate' : date
 // };
+exports.date = date;
