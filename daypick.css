@@ -83,3 +83,6 @@ color:black;
 .react-calendar__tile:disabled{
   background-color: white;
 }
+.react-calendar__tile:disabled {
+  color: #f0f0f0;
+}
