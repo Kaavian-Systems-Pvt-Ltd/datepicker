@@ -21,29 +21,21 @@ function MyDatePicker(props) {
   var _useState = (0, _react.useState)(new Date()),
     _useState2 = _slicedToArray(_useState, 2),
     value = _useState2[0],
-    updateValue = _useState2[1];
-  var _useState3 = (0, _react.useState)(''),
-    _useState4 = _slicedToArray(_useState3, 2),
-    pickdate = _useState4[0],
-    setPickdate = _useState4[1];
-  var _onChange = function onChange(date) {
-    updateValue(date);
+    setValue = _useState2[1];
+  var onChangeDate = function onChangeDate(date) {
+    var newDate = setValue(new Date(date.target.value));
+    setValue(newDate);
+    console.log(newDate);
   };
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "daypick"
-  }, /*#__PURE__*/_react["default"].createElement("input", {
-    type: "text",
-    className: "getdatevalue",
-    onChange: function onChange(e) {
-      return setPickdate(e.target.value);
-    }
-  }), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement(_reactDatePicker["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_reactDatePicker["default"], {
     dayPlaceholder: "dd",
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
     onChange: function onChange(e) {
-      return _onChange(e.target.value);
+      return onChangeDate(e);
     },
     value: value,
     minDate: new Date(props.startdate),
