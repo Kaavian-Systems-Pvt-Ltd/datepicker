@@ -5,18 +5,18 @@ import './daypick.css';
 
 function MyDatePicker(props){
 
-  const[startdate ,setStartdate] =  useState(new Date().toLocaleDateString('en-US'));
+  const[startdate ,setStartdate] =  useState(new Date().toLocaleDateString());
 
 
 
   return(
     <div className='daypick'>
 
-          <DatePicker  dayPlaceholder='dd' mon1thPlaceholder='mm' yearPlaceholder='yyyy' 
+          <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
           format='dd/MM/yyyy'  onChange={(date) => {
-          const d = new Date(date).toLocaleDateString('en-US');
-          console.log(d);
+          const d = new Date(date).toLocaleDateString();
           setStartdate(d);
+          console.log(d);
           }} value={d}
           minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}> 
           </DatePicker>
