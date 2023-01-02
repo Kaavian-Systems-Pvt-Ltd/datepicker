@@ -12,17 +12,15 @@ function MyDatePicker(props){
   return(
     <div className='daypick'>
 
-          <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
-           format='dd/MM/yyyy' 
+            <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
+            format='dd/MM/yyyy' 
           // onChange={setStartdate}
-            onChange={(e) => {
-            props.selectdate(e.target.value)
-          }}
-          value={startdate}
-          minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}> 
-          </DatePicker>
-          <div>{startdate}</div>
-          </div>
+            onChange={(e) => {props.selectdate(e.target.value)}}
+            value={startdate}
+            minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}> 
+            </DatePicker>
+            <div>{startdate}</div>
+            </div>
         
       );
 };
