@@ -5,20 +5,21 @@ import './daypick.css';
 
 export default function MyDatePicker(props){
 
-  const [ value , updateValue ] = useState (new Date ());
-  const[pickdate,setPickdate]=useState('');
-  const onChange = (date)=> {
-  updateValue (date);
+  const [ value , setValue ] = useState (new Date ());
+
+  const onChangeDate = (date) => {
+    const newDate = setValue((new Date(date.target.value)));
+    setValue(newDate);
+    console.log(newDate);
   };
 
 
   
   return(
     <div className='daypick'>
-          <input type='text'  className='getdatevalue' onChange={e=>setPickdate(e.target.value)}/>
-          <br/>
+      
           <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
-          format='dd/MM/yyyy' onChange={e =>onChange(e.target.value)}  value={value}
+          format='dd/MM/yyyy' onChange={e =>onChangeDate(e.target.value)}  value={value}
           minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}> 
           </DatePicker>
           </div>
