@@ -35,7 +35,7 @@ function MyDatePicker(props) {
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
     onChange: function onChange(e) {
-      return onChangeDate(e.target.value);
+      return onChangeDate(e);
     },
     value: value,
     minDate: new Date(props.startdate),

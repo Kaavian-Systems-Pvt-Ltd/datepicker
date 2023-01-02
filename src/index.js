@@ -17,9 +17,9 @@ export default function MyDatePicker(props){
   
   return(
     <div className='daypick'>
-      
+
           <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
-          format='dd/MM/yyyy' onChange={e =>onChangeDate(e.target.value)}  value={value}
+          format='dd/MM/yyyy' onChange={(e) =>onChangeDate(e)}  value={value}
           minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}> 
           </DatePicker>
           </div>
