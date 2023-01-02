@@ -86,3 +86,6 @@ color:black;
 .react-calendar__tile:disabled{
   color: #f0f0f0;
 }
+.react-calendar__tile--now {
+  background: #0E8692;
+}
