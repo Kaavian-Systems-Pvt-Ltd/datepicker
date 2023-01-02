@@ -7,20 +7,17 @@ function MyDatePicker(props){
 
   const[startdate ,setStartdate] =  useState(new Date().toLocaleDateString());
 
-
+  console.log(startdate);
 
   return(
     <div className='daypick'>
 
           <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
-          format='dd/MM/yyyy'  onChange={(date) => {
-          const d = new Date(date).toLocaleDateString();
-          setStartdate(d);
-          console.log(d);
-          }} value={d}
+          format='dd/MM/yyyy'  onChange={setStartdate}
+          value={startdate}
           minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}> 
           </DatePicker>
-          <div>{d}</div>
+          <div>{startdate}</div>
           </div>
         
       );
