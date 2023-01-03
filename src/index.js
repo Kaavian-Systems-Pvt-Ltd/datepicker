@@ -17,7 +17,7 @@ function MyDatePicker(startdate,enddate,selectdate){
           // onChange={setStartdate}
           
             onChange={(date) =>{selectdate(setDate(date))}}
-            value={startdate}
+            value={date}
             minDate={new Date(startdate)}  maxDate={new Date(enddate)}> 
             </DatePicker>
             </div>
