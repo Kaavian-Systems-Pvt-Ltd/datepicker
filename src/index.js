@@ -4,7 +4,7 @@ import DatePicker from 'react-date-picker';
 import propTypes from 'prop-types';
 import './daypick.css'; 
 
-export default function MyDatePicker(startdate,enddate,selectdate){
+export default function MyDatePicker(startdate,enddate){
 
   const[date ,setDate] =  useState(new Date());
 
@@ -17,7 +17,7 @@ export default function MyDatePicker(startdate,enddate,selectdate){
             format='dd/MM/yyyy' 
           
             // onChange={(date) =>{(selectdate(date))}}
-            onChange={(date) =>{selectdate(setDate(date))}}
+            onChange={(date) =>{setDate(date)}}
             value={date}
             minDate={new Date(startdate)}  maxDate={new Date(enddate)}> 
             </DatePicker>
