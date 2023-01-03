@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React , { useState } from 'react';
 import DatePicker from 'react-date-picker';
-import propTypes from 'prop-types';
+// import propTypes from 'prop-types';
 import './daypick.css'; 
 
 export default function MyDatePicker(startdate,enddate){
@@ -25,16 +25,16 @@ export default function MyDatePicker(startdate,enddate){
         
       );
 
-  }
-MyDatePicker.propTypes = {
-  'startdate' : PropTypes.date.isRequired,
-  'enddate' : PropTypes.date.isRequired,
-  'selectdate':PropTypes.func
-};
+  }  
+// MyDatePicker.propTypes = {
+//   'startdate' : PropTypes.date.isRequired,
+//   'enddate' : PropTypes.date.isRequired,
+//   'selectdate':PropTypes.func
+// };
 
-MyDatePicker.defaultProps = {
-  'selectdate' : string,
-  'startdate' : date,
-  'enddate':date
-};
+// MyDatePicker.defaultProps = {
+//   'selectdate' : string,
+//   'startdate' : date,
+//   'enddate':date
+// };
 
