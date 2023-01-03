@@ -1,23 +1,20 @@
 /* eslint-disable react/prop-types */
 import React , { useState } from 'react';
 import DatePicker from 'react-date-picker';
-import PropTypes from 'prop-types';
 import './daypick.css'; 
 
 function MyDatePicker(props){
 
-  const[date ,setDate] =  useState(new Date());
+  const[value ,setValue] =  useState(new Date());
 
-  console.log(date);
+  console.log(value);
 
   return(
     <div className='daypick'>
             <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
             format='dd/MM/yyyy' 
-          
-            // onChange={(date) =>{(selectdate(date))}}
-            onChange={(date) =>{setDate(date)}}
-            value={date}
+            onChange={(date) =>{setValue(date)}}
+            value={value}
             minDate={new Date(props.startdate)}  maxDate={new Date(props.enddate)}> 
             </DatePicker>
             </div>
@@ -27,15 +24,15 @@ function MyDatePicker(props){
 export default MyDatePicker;
 
   
-MyDatePicker.propTypes = {
-  'startdate' : PropTypes.date.isRequired,
-  'enddate' : PropTypes.date.isRequired,
-  'onChange':PropTypes.func
-};
+// MyDatePicker.propTypes = {
+//   'startdate' : PropTypes.date.isRequired,
+//   'enddate' : PropTypes.date.isRequired,
+//   'onChange':PropTypes.func
+// };
 
-MyDatePicker.defaultProps = {
-  'selectdate' : string,
-  'startdate' : date,
-  'enddate':date
-};
+// MyDatePicker.defaultProps = {
+//   'selectdate' : string,
+//   'startdate' : date,
+//   'enddate':date
+// };
 
