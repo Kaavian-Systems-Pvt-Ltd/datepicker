@@ -18,7 +18,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function MyDatePicker(startdate, enddate, selectdate) {
+function MyDatePicker(startdate, enddate) {
   var _useState = (0, _react.useState)(new Date()),
     _useState2 = _slicedToArray(_useState, 2),
     date = _useState2[0],
@@ -33,26 +33,24 @@ function MyDatePicker(startdate, enddate, selectdate) {
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy"
-    // onChange={setStartdate}
-    ,
 
-    onChange: function onChange(date) {
-      selectdate(date);
-    }
-    // onChange={(date) =>{selectdate(setDate(date))}}
+    // onChange={(date) =>{(selectdate(date))}}
     ,
+    onChange: function onChange(date) {
+      setDate(date);
+    },
     value: date,
     minDate: new Date(startdate),
     maxDate: new Date(enddate)
   }));
-  MyDatePicker.propTypes = {
-    'startdate': PropTypes.date.isRequired,
-    'enddate': PropTypes.date.isRequired,
-    'selectdate': PropTypes.func
-  };
-  MyDatePicker.defaultProps = {
-    'selectdate': string,
-    'startdate': date,
-    'enddate': date
-  };
 }
+MyDatePicker.propTypes = {
+  'startdate': PropTypes.date.isRequired,
+  'enddate': PropTypes.date.isRequired,
+  'selectdate': PropTypes.func
+};
+MyDatePicker.defaultProps = {
+  'selectdate': string,
+  'startdate': date,
+  'enddate': date
+};
