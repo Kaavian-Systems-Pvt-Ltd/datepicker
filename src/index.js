@@ -17,6 +17,7 @@ function MyDatePicker(startdate,enddate,selectdate){
           // onChange={setStartdate}
           
             onChange={(date) =>{(selectdate(date))}}
+            // onChange={(date) =>{selectdate(setDate(date))}}
             value={date}
             minDate={new Date(startdate)}  maxDate={new Date(enddate)}> 
             </DatePicker>
@@ -30,7 +31,7 @@ export default MyDatePicker;
 MyDatePicker.propTypes = {
   'startdate' : PropTypes.date.isRequired,
   'enddate' : PropTypes.date.isRequired,
-  'onChange':PropTypes.func.isRequired
+  'selectdate':PropTypes.func
 };
 
 MyDatePicker.defaultProps = {
