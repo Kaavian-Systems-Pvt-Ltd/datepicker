@@ -5,7 +5,7 @@ import './daypick.css';
 
 function MyDatePicker(props){
 
-  const[startdate ,setStartdate] =  useState(new Date().toLocaleDateString());
+  const[startdate ,setStartdate] =  useState(new Date());
 
   // console.log(startdate);
 
