@@ -16,7 +16,7 @@ function MyDatePicker(startdate,enddate,selectdate){
             format='dd/MM/yyyy' 
           // onChange={setStartdate}
           
-            onChange={(date) =>{selectdate(setDate(date))}}
+            onChange={(date) =>{(selectdate(date))}}
             value={date}
             minDate={new Date(startdate)}  maxDate={new Date(enddate)}> 
             </DatePicker>
