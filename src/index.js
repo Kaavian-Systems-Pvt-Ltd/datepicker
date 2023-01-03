@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import React , { useState } from 'react';
 import DatePicker from 'react-date-picker';
+import propTypes from 'prop-types';
 import './daypick.css'; 
 
-function MyDatePicker(startdate,enddate,selectdate){
+export default function MyDatePicker(startdate,enddate,selectdate){
 
   const[date ,setDate] =  useState(new Date());
 
@@ -24,9 +25,7 @@ function MyDatePicker(startdate,enddate,selectdate){
             </div>
         
       );
-};
 
-export default MyDatePicker;
 
 MyDatePicker.propTypes = {
   'startdate' : PropTypes.date.isRequired,
@@ -39,3 +38,5 @@ MyDatePicker.defaultProps = {
   'startdate' : date,
   'enddate':date
 };
+
+}
