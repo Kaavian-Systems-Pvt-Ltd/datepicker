@@ -33,26 +33,24 @@ function MyDatePicker(startdate, enddate, selectdate) {
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy"
-    // onChange={setStartdate}
-    ,
 
-    onChange: function onChange(date) {
-      selectdate(date);
-    }
-    // onChange={(date) =>{selectdate(setDate(date))}}
+    // onChange={(date) =>{(selectdate(date))}}
     ,
+    onChange: function onChange(date) {
+      selectdate(setDate(date));
+    },
     value: date,
     minDate: new Date(startdate),
     maxDate: new Date(enddate)
   }));
-  MyDatePicker.propTypes = {
-    'startdate': PropTypes.date.isRequired,
-    'enddate': PropTypes.date.isRequired,
-    'selectdate': PropTypes.func
-  };
-  MyDatePicker.defaultProps = {
-    'selectdate': string,
-    'startdate': date,
-    'enddate': date
-  };
 }
+MyDatePicker.propTypes = {
+  'startdate': PropTypes.date.isRequired,
+  'enddate': PropTypes.date.isRequired,
+  'selectdate': PropTypes.func
+};
+MyDatePicker.defaultProps = {
+  'selectdate': string,
+  'startdate': date,
+  'enddate': date
+};
