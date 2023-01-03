@@ -18,6 +18,7 @@
     "babel-plugin-transform-import-css": "^1.0.0-alpha.11",
     "css-loader": "^6.7.2",
     "eslint-config-kaaviansys": "github:Kaavian-Systems-Pvt-Ltd/eslint-config-kaaviansys",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-date-picker": "^9.1.0",
     "react-dom": "^18.2.0"
