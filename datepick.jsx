@@ -34,8 +34,9 @@ function MyDatePicker(startdate, enddate, selectdate) {
     format: "dd/MM/yyyy"
     // onChange={setStartdate}
     ,
-    onChange: function onChange(e) {
-      selectdate(e.target.value);
+
+    onChange: function onChange(date) {
+      selectdate(setDate(date));
     },
     value: startdate,
     minDate: new Date(startdate),
