@@ -4,9 +4,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports["default"] = MyDatePicker;
 var _react = _interopRequireWildcard(require("react"));
 var _reactDatePicker = _interopRequireDefault(require("react-date-picker"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
 require("./daypick.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -44,17 +45,14 @@ function MyDatePicker(startdate, enddate, selectdate) {
     minDate: new Date(startdate),
     maxDate: new Date(enddate)
   }));
+  MyDatePicker.propTypes = {
+    'startdate': PropTypes.date.isRequired,
+    'enddate': PropTypes.date.isRequired,
+    'selectdate': PropTypes.func
+  };
+  MyDatePicker.defaultProps = {
+    'selectdate': string,
+    'startdate': date,
+    'enddate': date
+  };
 }
-;
-var _default = MyDatePicker;
-exports["default"] = _default;
-MyDatePicker.propTypes = {
-  'startdate': PropTypes.date.isRequired,
-  'enddate': PropTypes.date.isRequired,
-  'selectdate': PropTypes.func
-};
-MyDatePicker.defaultProps = {
-  'selectdate': string,
-  'startdate': date,
-  'enddate': date
-};
