@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React , { useState } from 'react';
 import DatePicker from 'react-date-picker';
@@ -5,7 +6,7 @@ import './daypick.css';
 import PropTypes from 'prop-types';
 
 
-export const MyDatePicker = ({ minDate , maxDate , ...props })=> {
+export const MyDatePicker = (props)=> {
 
   const [ value , updateValue ] = useState (new Date ());
  
@@ -16,7 +17,7 @@ export const MyDatePicker = ({ minDate , maxDate , ...props })=> {
           <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
           format='dd/MM/yyyy' onChange={(date)=>updateValue(date)}
           value={value}
-          minDate={new Date (2022 , 10 , 1)} maxDate={new Date (2022 , 11 , 31)}>
+          minDate={new Date(props.startdate)} maxDate={new Date(props.enddate)}>
           </DatePicker>
           </div>
         
