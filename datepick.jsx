@@ -34,7 +34,7 @@ function MyDatePicker(props) {
     format: "dd/MM/yyyy",
     value: caldate,
     onChange: function onChange(e) {
-      return props.selectdate(setCaldate(e.target.value));
+      return props.setCaldate(e.target.value);
     },
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)

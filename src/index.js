@@ -14,7 +14,7 @@ function MyDatePicker(props){
     <div className='daypick'>
             <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
             format='dd/MM/yyyy' value={caldate}
-            onChange={(e)=>props.selectdate(setCaldate(e.target.value))}
+            onChange={(e)=>props.setCaldate(e.target.value)}
             minDate={new Date(props.startdate)}  maxDate={new Date(props.enddate)}> 
             </DatePicker>
             </div>
