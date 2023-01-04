@@ -29,8 +29,8 @@ function MyDatePicker(props) {
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
-    onChange: function onChange(e) {
-      props.setdate(e.target.value);
+    onChange: function onChange(date) {
+      props.setValue(date.target.value);
     },
     value: value,
     minDate: new Date(props.startdate),
