@@ -21,7 +21,7 @@ function MyDatePicker(props) {
   var _useState = (0, _react.useState)(new Date()),
     _useState2 = _slicedToArray(_useState, 2),
     value = _useState2[0],
-    setValue = _useState2[1];
+    updateValue = _useState2[1];
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "daypick"
   }, /*#__PURE__*/_react["default"].createElement(_reactDatePicker["default"], {
@@ -29,8 +29,8 @@ function MyDatePicker(props) {
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
-    onChange: function onChange(e) {
-      props.setdate(e.target.value);
+    onChange: function onChange(date) {
+      updateValue(date);
     },
     value: value,
     minDate: new Date(props.startdate),
