@@ -22,6 +22,8 @@ function MyDatePicker(props) {
     _useState2 = _slicedToArray(_useState, 2),
     caldate = _useState2[0],
     setCaldate = _useState2[1];
+  // console.log(caldate);
+
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "daypick"
   }, /*#__PURE__*/_react["default"].createElement(_reactDatePicker["default"], {
@@ -31,7 +33,7 @@ function MyDatePicker(props) {
     format: "dd/MM/yyyy",
     value: caldate,
     onChange: function onChange(date) {
-      setCaldate(date);
+      props.setCaldate(date.target.value);
     },
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)
