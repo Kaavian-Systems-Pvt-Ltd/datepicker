@@ -7,13 +7,11 @@ function MyDatePicker(props){
 
   const[value ,setValue] = useState(new Date());
 
-  // console.log(value);
-
   return(
     <div className='daypick'>
             <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
             format='dd/MM/yyyy' 
-            onChange={(e) =>{props.setdate(e.target.value)}}
+            onChange={(e) =>{props.selectdate(setValue(e.target.value))}}
             value={value}
             minDate={new Date(props.startdate)}  maxDate={new Date(props.enddate)}> 
             </DatePicker>
