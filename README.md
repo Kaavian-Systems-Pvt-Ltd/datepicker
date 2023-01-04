@@ -23,7 +23,7 @@ function App(){
   console.log(pickdate);
     return (
             <div>
-              <MyDatePicker  startdate="2022/12/01" setdate={setPickdate}   enddate="2023/03/20"/>
+              <MyDatePicker  startdate="2022/12/01" selectdate={setPickdate}   enddate="2023/03/20"/>
             </div>
     );
 }
