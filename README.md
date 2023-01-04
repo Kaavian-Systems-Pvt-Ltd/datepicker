@@ -23,7 +23,7 @@ function App(){
   console.log(pickdate);
     return (
             <div>
-              <MyDatePicker  startdate='' enddate=''  selectdate={setPickdate}/>
+              <MyDatePicker  startdate='' enddate=''  setdate={setPickdate}/>
             </div>
     );
 }
