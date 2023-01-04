@@ -32,9 +32,7 @@ function MyDatePicker(props) {
     value: value,
     onChange: function onChange(date) {
       setValue(date);
-    }
-    //onChange={(e)=>{props.setValue(e.target.value)}}
-    ,
+    },
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)
   }));
