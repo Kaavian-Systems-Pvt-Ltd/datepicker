@@ -5,15 +5,18 @@ import './daypick.css';
 
 function MyDatePicker(props){
 
-  const[value ,updateValue] = useState(new Date());
+  const[picdate ,setPicdate] = useState(new Date());
   
+  onChange=(date)=>{
+    setPicdate(date)
+  };
 
   return(
     <div className='daypick'> 
             <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
             format='dd/MM/yyyy' 
-            onChange={(e)=>{updateValue(e.target.value)}}
-            value={value}
+            onChange={onChange}
+            value={picdate}
             minDate={new Date(props.startdate)}  maxDate={new Date(props.enddate)}> 
             </DatePicker>
             </div>
