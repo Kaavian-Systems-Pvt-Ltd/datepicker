@@ -4,7 +4,7 @@ import DatePicker from 'react-date-picker';
 import PropTypes, { string } from 'prop-types';
 import './daypick.css'; 
 
-function MyDatePicker({props}){
+function MyDatePicker(props){
 
   const [cdate,setCdate] = useState(new Date());
 
