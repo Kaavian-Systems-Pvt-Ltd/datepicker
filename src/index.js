@@ -3,7 +3,7 @@ import React , { useState } from 'react';
 import DatePicker from 'react-date-picker';
 import './daypick.css'; 
 
-function MyDatePicker(props){
+function MyDatePicker({props}){
 
   const [caldate,setCaldate] = useState(new Date());
 
@@ -12,7 +12,7 @@ function MyDatePicker(props){
             <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
             format='dd/MM/yyyy'
             value={caldate}
-            onChange={(date)=>{setCaldate(date.target.value)}}
+            onChange={(date)=>{setCaldate(date)}}
             minDate={new Date(props.startdate)}  maxDate={new Date(props.enddate)}> 
             </DatePicker>
             </div>
