@@ -23,7 +23,7 @@ function MyDatePicker(props) {
     caldate = _useState2[0],
     setCaldate = _useState2[1];
 
-  // onChange={(e) =>{props.setcaldate(e.target.value)}}
+  // onChange={(e) =>{props.selectdate(e.target.value)}}
 
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "daypick"

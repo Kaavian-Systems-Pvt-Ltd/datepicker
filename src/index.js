@@ -7,7 +7,7 @@ function MyDatePicker(props){
 
   const[caldate ,setCaldate] = useState(new Date());
 
-  // onChange={(e) =>{props.setcaldate(e.target.value)}}
+  // onChange={(e) =>{props.selectdate(e.target.value)}}
 
 
   return(
