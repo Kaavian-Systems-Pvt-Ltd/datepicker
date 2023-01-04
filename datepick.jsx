@@ -29,7 +29,7 @@ function MyDatePicker(props) {
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
-    selected: date,
+    value: date,
     onChange: function onChange(e) {
       props.setDate(e.target.value);
     },
