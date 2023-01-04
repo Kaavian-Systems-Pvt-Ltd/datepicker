@@ -6,6 +6,7 @@ import './daypick.css';
 function MyDatePicker(props){
 
   const[value ,setValue] = useState(new Date());
+  
 
   return(
     <div className='daypick'>
