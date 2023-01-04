@@ -1,7 +1,7 @@
 # Datepicker
 
 ## Note:
-This package datepicker is used to disable your input dates to the component.
+This package datepicker is used to disable  dates of the user's input to the component and get the picked date value.
 
 ## Installation:
 #### To install:
