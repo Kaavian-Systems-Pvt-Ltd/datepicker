@@ -14,7 +14,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 /* eslint-disable react/prop-types */
 
 function MyDatePicker(props) {
-  // const [valdate,setDate] = useState(new Date());
+  // const [valdate] = useState(new Date());
 
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "daypick"
@@ -22,9 +22,11 @@ function MyDatePicker(props) {
     dayPlaceholder: "dd",
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
-    format: "dd/MM/yyyy",
-    onChange: function onChange(date) {
-      props.setDate(date.target.value);
+    format: "dd/MM/yyyy"
+    //value={valdate}
+    ,
+    onChange: function onChange(e) {
+      props.setdate(e.target.value);
     },
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)
