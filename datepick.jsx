@@ -31,8 +31,8 @@ function MyDatePicker(_ref) {
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
     value: valdate,
-    onChange: function onChange(e) {
-      _onChange(e.target.value);
+    onChange: function onChange(date) {
+      _onChange(date);
     },
     minDate: new Date(startdate),
     maxDate: new Date(enddate)

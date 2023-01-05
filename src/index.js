@@ -14,7 +14,7 @@ return(
             <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
             format='dd/MM/yyyy'
             value={valdate}
-            onChange={(e)=>{onChange(e.target.value)}}
+            onChange={(date)=>{onChange(date)}}
             minDate={new Date(startdate)}  maxDate={new Date(enddate)}> 
             </DatePicker>
             </div>
