@@ -2,18 +2,18 @@
 import React , { useState } from 'react';
 import DatePicker from 'react-date-picker';
 import './daypick.css';
-import PropTypes from 'prop-types'; 
+//import PropTypes from 'prop-types'; 
 
 function MyDatePicker(props){
 
-    const [valdate,setDate] = useState(new Date());
+    const [valdate,setValdate] = useState(new Date());
 
   return(
     <div className='daypick'> 
             <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
             format='dd/MM/yyyy'
             value={valdate}
-            onChange={(date)=>setDate(date)}
+            onChange={(date)=>props.setValdate(date.target.value)}
             minDate={new Date(props.startdate)}  maxDate={new Date(props.enddate)}> 
             </DatePicker>
             </div>
@@ -23,15 +23,15 @@ function MyDatePicker(props){
 export default MyDatePicker;
 
   
-MyDatePicker.propTypes = {
-  'startdate' : PropTypes.string.isRequired,
-  'enddate' : PropTypes.string.isRequired,
-  'onChange':PropTypes.func
-};
+// MyDatePicker.propTypes = {
+//   'startdate' : PropTypes.string.isRequired,
+//   'enddate' : PropTypes.string.isRequired,
+//   'onChange':PropTypes.func
+// };
 
-MyDatePicker.defaultprops = {
-  'setDate' : string,
-  'startdate' : string,
-  'enddate':string
-};
+// MyDatePicker.defaultprops = {
+//   'setDate' : string,
+//   'startdate' : string,
+//   'enddate':string
+// };
 
