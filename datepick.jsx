@@ -36,7 +36,7 @@ function MyDatePicker(_ref) {
     format: "dd/MM/yyyy",
     value: val,
     onChange: function onChange(date) {
-      setVal(date);
+      return setVal(date);
     },
     minDate: new Date(startdate),
     maxDate: new Date(enddate)
