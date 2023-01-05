@@ -18,16 +18,17 @@ This package datepicker is used to disable  dates of the user's input to the com
 import MyDatePicker from '@kaavian-sys/datepicker';
 import { useState } from 'react';
 function App(){
-    
-  const[pickdate,setPickdate]=useState('');
-  console.log(pickdate);
-    return (
+      const[newdate,setNewdate]=useState(new Date());
+      console.log(newdate);
+  
+     return (
             <div>
-              <MyDatePicker  startdate='' enddate=''  setDate={setPickdate}/>
+              <MyDatePicker valdate={newdate} onChange={setNewdate}  startdate="2022/12/01" enddate="2023/05/31"/>
             </div>
     );
 }
 export default App;  
+
 
 ```
 
