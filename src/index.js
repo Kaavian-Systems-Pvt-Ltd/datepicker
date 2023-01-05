@@ -6,17 +6,17 @@ import './daypick.css';
 
 function MyDatePicker({startdate,enddate}){
 
-     const[date,setDate]=useState(new Date());
+     const[val,setVal]=useState(new Date());
 
      const handleChange=(date)=>{
-      setDate(date);
+      setVal(date);
      }
 
   return(
     <div className='daypick'> 
             <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
             format='dd/MM/yyyy'
-            value={date}
+            value={val}
             onChange={handleChange}
             minDate={new Date(startdate)}  maxDate={new Date(enddate)}> 
             </DatePicker>
