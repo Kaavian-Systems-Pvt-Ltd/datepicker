@@ -5,7 +5,8 @@ import './daypick.css';
 
 function MyDatePicker(props){
 
-  const [valdate,setDate] = useState(new Date());
+  const [valdate,setDate] = useState(new Date().toLocaleDateString());
+  console.log(valdate);
 
   return(
     <div className='daypick'> 
@@ -13,7 +14,6 @@ function MyDatePicker(props){
             format='dd/MM/yyyy'
             value={valdate}
             onChange={(date)=>{const d=new Date(date).toLocaleDateString('fr-FR');
-            console.log(d);
             setDate(d)}}
             minDate={new Date(props.startdate)}  maxDate={new Date(props.enddate)}> 
             </DatePicker>
