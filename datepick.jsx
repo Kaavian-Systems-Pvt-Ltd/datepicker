@@ -31,7 +31,7 @@ function MyDatePicker(props) {
     format: "dd/MM/yyyy",
     value: valdate,
     onChange: function onChange(date) {
-      props.setDate(date);
+      props.setDate(date.target.value);
     },
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)
