@@ -11,7 +11,7 @@ This package datepicker is used to disable  dates of the user's input to the com
 - The starting or ending date format is must startdate="year/month/date" or enddate:"yyyy/mm/dd",
 * The parameters are not change,must in same text ex:startdate, enddate,setdate,
 + The date values are may be possible to change as per user's choice to disable dates,
-- The setdate is used to user get a date value.
+- The setDate is used to user get a date value.
 
 ## The codes in your file: 
 ```
@@ -23,7 +23,7 @@ function App(){
   console.log(pickdate);
     return (
             <div>
-              <MyDatePicker  startdate='' enddate=''  setdate={setPickdate}/>
+              <MyDatePicker  startdate='' enddate=''  setDate={setPickdate}/>
             </div>
     );
 }
