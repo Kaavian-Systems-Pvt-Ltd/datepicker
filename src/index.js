@@ -16,7 +16,7 @@ function MyDatePicker({startdate,enddate}){
     <div className='daypick'> 
             <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
             format='dd/MM/yyyy'
-            selected={date}
+            value={date}
             onChange={handleChange}
             minDate={new Date(startdate)}  maxDate={new Date(enddate)}> 
             </DatePicker>
