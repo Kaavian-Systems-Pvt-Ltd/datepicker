@@ -31,10 +31,10 @@ function MyDatePicker(props) {
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
-    onChange: function onChange(e) {
-      setVal(e.target.value);
-    },
     value: val,
+    onChange: function onChange(date) {
+      setVal(date);
+    },
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)
   }));
