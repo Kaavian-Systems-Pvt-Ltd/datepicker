@@ -20,12 +20,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 //import PropTypes from 'prop-types'; 
 
 function MyDatePicker(_ref) {
-  var setVal = _ref.setVal,
-    startdate = _ref.startdate,
+  var startdate = _ref.startdate,
     enddate = _ref.enddate;
   var _useState = (0, _react.useState)(new Date()),
-    _useState2 = _slicedToArray(_useState, 1),
-    val = _useState2[0];
+    _useState2 = _slicedToArray(_useState, 2),
+    val = _useState2[0],
+    setVal = _useState2[1];
   var ondate = function ondate(date) {
     setVal(date);
   };

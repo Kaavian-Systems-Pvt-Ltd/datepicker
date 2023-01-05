@@ -4,9 +4,10 @@ import DatePicker from 'react-date-picker';
 import './daypick.css';
 //import PropTypes from 'prop-types'; 
 
-function MyDatePicker({ setVal,startdate,enddate}){
+function MyDatePicker({startdate,enddate}){
 
-    const [val]=useState(new Date());
+    const [val,setVal]=useState(new Date());
+
     const ondate=(date)=>{
       setVal(date);
     }
