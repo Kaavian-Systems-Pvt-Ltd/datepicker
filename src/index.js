@@ -6,14 +6,14 @@ import './daypick.css';
 
 function MyDatePicker(props){
 
-    const [valdate,setValdate] = useState(new Date());
+    const [cdate,setdate] = useState(new Date());
 
   return(
     <div className='daypick'> 
             <DatePicker  dayPlaceholder='dd' monthPlaceholder='mm' yearPlaceholder='yyyy' 
             format='dd/MM/yyyy'
-            value={valdate}
-            onChange={(date)=>setValdate(date)}
+            value={cdate}
+            onChange={(date)=>{setdate(date)}}
             minDate={new Date(props.startdate)}  maxDate={new Date(props.enddate)}> 
             </DatePicker>
             </div>
