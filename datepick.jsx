@@ -22,8 +22,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function MyDatePicker(props) {
   var _useState = (0, _react.useState)(new Date()),
     _useState2 = _slicedToArray(_useState, 2),
-    valdate = _useState2[0],
-    setValdate = _useState2[1];
+    cdate = _useState2[0],
+    setdate = _useState2[1];
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "daypick"
   }, /*#__PURE__*/_react["default"].createElement(_reactDatePicker["default"], {
@@ -31,9 +31,9 @@ function MyDatePicker(props) {
     monthPlaceholder: "mm",
     yearPlaceholder: "yyyy",
     format: "dd/MM/yyyy",
-    value: valdate,
+    value: cdate,
     onChange: function onChange(date) {
-      return setValdate(date);
+      setdate(date);
     },
     minDate: new Date(props.startdate),
     maxDate: new Date(props.enddate)
