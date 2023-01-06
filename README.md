@@ -7,11 +7,11 @@ This package datepicker is used to disable  dates of the user's input to the com
 #### To install:
 ```npm i  https://github.com/Kaavian-Systems-Pvt-Ltd/Datepicker.git  --save-dev```
 
-## Rules:
+## Instructions:
 - The starting or ending date format is must startdate="year/month/date" or enddate:"yyyy/mm/dd",
 * The parameters are not change,must in same text ex:startdate, enddate,setdate,
 + The date values are may be possible to change as per user's choice to disable dates,
-- The setDate is used to user get a date value.
+- The setNewdate and newdate are used to user get a date value in variable.
 
 ## The codes in your file: 
 ```
